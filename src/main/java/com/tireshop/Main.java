@@ -1,5 +1,6 @@
 package com.tireshop;
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,6 +15,20 @@ public class Main {
 
 
         System.out.println("=========================== Exercise 2 ==================================");
+
+        List<Service> services = new ArrayList<>();
+
+        services.add(new WinterTireChange(false, true, false));
+        services.add(new SummerTireChange(true, false, false));
+        services.add(new WinterTireChange(true, true, true));
+
+        for (Service s : services) {
+            System.out.println(s.getId() + " - " + s.getName());
+            System.out.println(s.getPriceBreakdown());
+            System.out.println("Total price: " + s.calculatePrice() + " SEK\n");
+
+        }
+
 
     }
 }
