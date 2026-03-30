@@ -10,7 +10,7 @@ public class WinterTireChange extends Service {
 
     @Override
     public int calculatePrice() {
-        // basisprijs + eventuele extra's
+        // basis price and extra's when they are there
         return (int) getBasePrice() + calculateExtras();
     }
 

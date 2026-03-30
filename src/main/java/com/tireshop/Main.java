@@ -29,6 +29,34 @@ public class Main {
 
         }
 
+            System.out.println("=========================== Exercise 3 ==================================");
+        // Example 1: Member booking (Winter tires)
+        Service winterService = new WinterTireChange(false, true, false);
+        BookingRequest winterRequest = new BookingRequest(winterService);
 
-    }
+        BookingProcessor memberProcessor = new MemberBookingProcessor();
+        Booking winterBooking = memberProcessor.processBooking(winterRequest);
+        winterBooking.printSummary();
+
+        System.out.println();
+        System.out.println("-----------------------------------------");
+        System.out.println();
+
+        //Example 2: Non-member booking (Summer tires)
+        Service summerService = new SummerTireChange(true, false, false);
+        BookingRequest summerRequest = new BookingRequest(summerService);
+
+        BookingProcessor nonMemberProcessor = new NonMemberBookingProcessor();
+        Booking summerBooking = nonMemberProcessor.processBooking(summerRequest);
+
+        summerBooking.printSummary();
+        Service service = new WinterTireChange(false, true, false);
+
+        System.out.println();
+
+        System.out.println("Thanks for watching my exercises! Have a nice day =) ");
+        }
+
+
+
 }

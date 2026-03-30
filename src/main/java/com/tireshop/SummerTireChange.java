@@ -34,11 +34,6 @@ public class SummerTireChange extends Service {
                 .append(subtotal)
                 .append(" SEK\n");
 
-        // Show final total price after discount
-        sb.append("Total price: ")
-                .append(subtotal - discount)
-                .append(" SEK\n");
-
         return sb.toString();
     }
 }

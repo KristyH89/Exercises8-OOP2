@@ -5,7 +5,7 @@ public abstract class Service {
     private static int counter = 0;
     private final String id;
     private final String name;
-    private double basePrice;
+    private int basePrice;
 
     // extra options for services:
 
@@ -13,7 +13,7 @@ public abstract class Service {
     protected final boolean storage;
     protected final boolean yearlyStorage;
 
-    public Service(String name, double basePrice, boolean tiresOnRim, boolean storage, boolean yearlyStorage) {
+    public Service(String name, int basePrice, boolean tiresOnRim, boolean storage, boolean yearlyStorage) {
         counter++;
         this.id = "S-" + String.format("%05d", counter);
         this.name = name;
@@ -33,7 +33,7 @@ public abstract class Service {
         return name;
     }
 
-    public double getBasePrice() {
+    public int getBasePrice() {
         return basePrice;
     }
 // Extra cost for tires on rim and storage.
